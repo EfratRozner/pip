@@ -1,0 +1,12 @@
+
+<app-destnation></app-destnation>
+
+<div *ngIf="user.role=='agent'" >
+<button (click)="showorder()">show order</button>
+<ul *ngIf="view"> 
+<li *ngFor="let o of orderData">name:{{o.name}} numFlight:{{o.numFlight}}</li>
+</ul>
+<h2>Add New Worker</h2>
+<input type="text" [(ngModel)]="newDestnation" placeholder="destnation"/> <br/>
+<button (click)="addDastenaition()" >add</button>
+</div>
